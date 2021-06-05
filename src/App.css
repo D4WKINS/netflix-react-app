@@ -1,0 +1,24 @@
+#Nav{
+ background-color: black;
+ color:white;
+}
+
+#avatar {
+  height: 36px;
+}
+#logo {
+  height: 48px;
+}
+
+.footer-li{
+  list-style-type: none;
+}
+
+
+@media(min-width:768px){
+  #footer{
+  padding-left:10rem;
+  padding-right:10rem;
+  }
+
+}
