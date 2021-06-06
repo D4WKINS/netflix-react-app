@@ -2,22 +2,38 @@ import React, { Component, } from 'react';
 // import ReactCardCarousel from 'react-card-carousel';
 import {Card } from 'react-bootstrap'
 
+import './Card.css';
+
 
 
 class MyCard extends Component {
 
+
+
     state = {
         movielist: [], // empty state
-        chosenmovie: {}
+        chosenmovie: {},
+        showBox: false,
         // isLoading: true,
         // isError: false
     }
+
+    handleBoxToggle = () => this.setState({ showBox: !this.state.showBox });
+
+   
 
    
 
     // what we want for our expensive operations is being able to call the ONCE
     // not only once, but also in a way that doesn't affect the speed of the app
     // the user experience
+
+    // changeName = () {
+    //     const movieName = this.state.name
+    //     const searchName = movieName.replace(" ", "%20")
+
+    // }
+
 
     componentDidMount = async () => {
         // this is a reserved method, a lifecycle one
@@ -54,7 +70,19 @@ class MyCard extends Component {
 
   render() {
     return (
-       <Card style={{ width: '12rem', margin:"0" }}>
+       <Card style={{ width: '12rem', margin:"0", padding:"0", border:"0"}}
+       className="container-fluid cardHover">
+           <div
+                onMouseEnter={this.handleBoxToggle}
+                onMouseLeave={this.handleBoxToggle}
+                className={`container${this.state.showBox ? " show" : ""} h-100 containerOverlay container-fluid`}
+                style={{padding:"0", margin:"0", border:"0"}}
+            >
+                <div className="wrapper"
+                style={{padding:"0", margin:"0", border:"0"}}>
+                <div className="innerBox gradient" style={{padding:"0", margin:"0", border:"0"}}/>
+                
+            
             <Card.Img variant="top"  className="img-fluid h-100" src={this.state.chosenmovie.Poster}/>
             {/* <Card.Body>
                 <Card.Title>{this.props.movietitle}</Card.Title>
@@ -64,6 +92,9 @@ class MyCard extends Component {
                 </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body> */}
+            </div>
+                </div>
+            
             </Card>)
   }
 }

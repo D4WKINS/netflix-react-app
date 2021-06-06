@@ -4,8 +4,19 @@ import { Carousel, Row, Col, Container } from 'react-bootstrap'
 
 import MyCard from './Card'
 
+import './Gallery.css'
+
 
 class MyGallery extends Component {
+
+
+  componentDidMount () {
+    const script = document.createElement("script");    
+    script.async = true;    
+    script.src = "./Gallery.js";    
+    document.body.appendChild(script);  
+ 
+  }
 
     
 
@@ -31,7 +42,7 @@ class MyGallery extends Component {
 <Container >
     <Carousel className="my-5">
       
-  <Carousel.Item>
+  <Carousel.Item className="overflow">
   <Row >
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
 
@@ -56,7 +67,7 @@ class MyGallery extends Component {
     </Row>
 
   </Carousel.Item>
-  <Carousel.Item>
+  <Carousel.Item className="overflow">
   <Row >
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
     
@@ -99,7 +110,7 @@ class MyGallery extends Component {
 <Carousel className="my-5">
       
       <Carousel.Item>
-      <Row >
+      <Row>
             <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
         
         <MyCard name="coco"/>
@@ -136,13 +147,13 @@ class MyGallery extends Component {
         <MyCard name="black panther"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="black lightening"/>
+        <MyCard name="how I met your mother"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
         <MyCard name="comedians of the world"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the last czar"/>
+        <MyCard name="beauty and the beast"/>
         </Col>
         
         </Row>
