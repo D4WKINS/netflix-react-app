@@ -4,7 +4,7 @@ import React, { Component, useImperativeHandle, } from 'react';
 import { Card } from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
+
 
 import './Card.css';
 
@@ -88,13 +88,13 @@ class MyCard extends Component {
                 <h6 className="titleText text-center">{this.state.chosenmovie.Title}</h6>
                 <Row>
                     <Button className="btn-circle btn-md">
-                        <FontAwesomeIcon icon={["fas", "faPlay"]} />
+                        <FontAwesomeIcon icon={["fas", "play"]} />
                     </Button>
                     <Button className="btn-circle btn-md">
-                        <FontAwesomeIcon icon={["fas", "faThumbsUp"]} />
+                        <FontAwesomeIcon icon={["fas", "thumbsUp"]} />
                     </Button>
                     <Button className="btn-circle btn-md">
-                        <FontAwesomeIcon icon={["fas", "faThumbsDown"]} height={"20px"} />
+                        <FontAwesomeIcon icon={["fas", "thumbsDown"]} height={"20px"} />
                     </Button>
 
                 </Row>
