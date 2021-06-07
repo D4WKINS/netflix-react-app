@@ -1,6 +1,10 @@
-import React, { Component, } from 'react';
+import { Button, Row } from 'react-bootstrap';
+import React, { Component, useImperativeHandle, } from 'react';
 // import ReactCardCarousel from 'react-card-carousel';
 import { Card } from 'react-bootstrap'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 
 import './Card.css';
 
@@ -82,6 +86,18 @@ class MyCard extends Component {
                 style={{padding:"0", margin:"0", border:"0"}}>
                 <div className="innerBox gradient" style={{padding:"0", margin:"0", border:"0"}}/>
                 <h6 className="titleText text-center">{this.state.chosenmovie.Title}</h6>
+                <Row>
+                    <Button className="btn-circle btn-md">
+                        <FontAwesomeIcon icon={["fas", "faPlay"]} />
+                    </Button>
+                    <Button className="btn-circle btn-md">
+                        <FontAwesomeIcon icon={["fas", "faThumbsUp"]} />
+                    </Button>
+                    <Button className="btn-circle btn-md">
+                        <FontAwesomeIcon icon={["fas", "faThumbsDown"]} height={"20px"} />
+                    </Button>
+
+                </Row>
                 
             
             <Card.Img variant="top"  className="img-fluid h-100" src={this.state.chosenmovie.Poster}/>

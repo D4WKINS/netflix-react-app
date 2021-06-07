@@ -1,6 +1,5 @@
 import {Container,Navbar,Nav} from 'react-bootstrap'
 import {Component} from 'react'
-import Card from './Card'
 
 class NavBar extends Component {
     // state = {

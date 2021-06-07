@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import ReactCardCarousel from 'react-card-carousel';
-import { Carousel, Row, Col, Container } from 'react-bootstrap'
+import { Carousel, Row, Col, Container, CarouselItem } from 'react-bootstrap'
 
 import MyCard from './Card'
 
@@ -19,32 +19,20 @@ class MyGallery extends Component {
  
   }
 
+
+  
+  
+
     
 
   render() {
     return (
-    //   <ReactCardCarousel autoplay={ true } autoplay_speed={ 2500 }>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       First Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Second Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Third Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Fourth Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Fifth Card
-    //     </div>
-    //   </ReactCardCarousel>
+
 <Container >
     <Carousel className="my-5 movieCardCarousel">
       
   <Carousel.Item className="overflow">
-  <Row >
+    <Row>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
 
     <MyCard name="the good place"/>
@@ -228,8 +216,24 @@ class MyGallery extends Component {
       
     </Carousel>
 </Container>
+    
+    
+    
+    
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default MyGallery;
