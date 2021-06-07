@@ -7,6 +7,7 @@ import MyCard from './Card'
 import './Gallery.css'
 
 
+
 class MyGallery extends Component {
 
 
@@ -40,7 +41,7 @@ class MyGallery extends Component {
     //     </div>
     //   </ReactCardCarousel>
 <Container >
-    <Carousel className="my-5">
+    <Carousel className="my-5 movieCardCarousel">
       
   <Carousel.Item className="overflow">
   <Row >
@@ -68,7 +69,7 @@ class MyGallery extends Component {
 
   </Carousel.Item>
   <Carousel.Item className="overflow">
-  <Row >
+  <Row> 
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
     
     <MyCard name="the flight"/>
@@ -138,24 +139,24 @@ class MyGallery extends Component {
       <Row >
             <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
         
-        <MyCard name="when they see us"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="dead to me"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="black panther"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="how I met your mother"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="comedians of the world"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="beauty and the beast"/>
-        </Col>
-        
+            <MyCard name="when they see us"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="dead to me"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="black panther"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="how I met your mother"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="comedians of the world"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="beauty and the beast"/>
+            </Col>
+            
         </Row>
     
       </Carousel.Item>
@@ -177,67 +178,52 @@ class MyGallery extends Component {
     <Carousel className="my-5">
       
       <Carousel.Item>
-      <Row>
+        <Row>
             <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        
-        <MyCard name="stranger things"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="david letterman"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="money heist"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="good girl"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="dave chappelle"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the bird dave chappelle "/>
-        </Col>
-        
+            <MyCard name="stranger things"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="david letterman"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="money heist"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="good girl"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="dave chappelle"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="the bird dave chappelle "/>
+            </Col>
         </Row>
     
       </Carousel.Item>
       <Carousel.Item>
-      <Row >
+        <Row>
             <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        
-        <MyCard name="the it crowd"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="tales of the city"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the standups"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center">
-        <MyCard name="kevin hart"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the wood"/>
-        </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="candyman"/>
-        </Col>
-        
+            <MyCard name="the it crowd"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="tales of the city"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="the standups"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center">
+            <MyCard name="kevin hart"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="the wood"/>
+            </Col>
+            <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
+            <MyCard name="candyman"/>
+            </Col>
         </Row>
     
       </Carousel.Item>
       
-      {/* <Carousel.Item>
-      <Row>
-          
-     
-    
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-     
-      </Carousel.Item> */}
     
       
     </Carousel>

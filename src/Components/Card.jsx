@@ -1,6 +1,6 @@
 import React, { Component, } from 'react';
 // import ReactCardCarousel from 'react-card-carousel';
-import {Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 import './Card.css';
 
@@ -81,6 +81,7 @@ class MyCard extends Component {
                 <div className="wrapper"
                 style={{padding:"0", margin:"0", border:"0"}}>
                 <div className="innerBox gradient" style={{padding:"0", margin:"0", border:"0"}}/>
+                <h6 className="titleText text-center">{this.state.chosenmovie.Title}</h6>
                 
             
             <Card.Img variant="top"  className="img-fluid h-100" src={this.state.chosenmovie.Poster}/>
@@ -92,6 +93,7 @@ class MyCard extends Component {
                 </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body> */}
+            
             </div>
                 </div>
             
