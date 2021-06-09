@@ -7,6 +7,10 @@ import MyCard from './Card'
 
 class MyGallery extends Component {
 
+  state={
+    selected:false
+  }
+
     
 
   render() {
@@ -47,10 +51,10 @@ class MyGallery extends Component {
     <MyCard name="luther"/>
     </Col>
     <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-    <MyCard name="fast and furious"/>
+    <MyCard name="Joker"/>
     </Col>
     <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-    <MyCard name="unhinged"/>
+    <MyCard name="Moana"/>
     </Col>
     
     </Row>
@@ -102,22 +106,22 @@ class MyGallery extends Component {
       <Row >
             <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
         
-        <MyCard name="coco"/>
+        <MyCard  name="coco"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the blacklist"/>
+        <MyCard  name="the blacklist"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="how i met your mother"/>
+        <MyCard   name="You"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="brooklyn nine"/>
+        <MyCard  name="coco" />
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="fresh prince"/>
+        <MyCard  name="fresh prince"/>
         </Col>
-        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="black mirror"/>
+        <Col xm={12} md={3} lg={2} className="d-flex justify-content-center" >
+        <MyCard   name="black mirror"/>
         </Col>
         
         </Row>
@@ -136,13 +140,13 @@ class MyGallery extends Component {
         <MyCard name="black panther"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="black lightening"/>
+        <MyCard name="Guardians of the galaxy"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="comedians of the world"/>
+        <MyCard name="Afro samurai"/>
         </Col>
         <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-        <MyCard name="the last czar"/>
+        <MyCard name="Seven Pounds"/>
         </Col>
         
         </Row>
