@@ -6,8 +6,7 @@ class Footer extends Component {
     render() { 
         return (
             < >
- 
-            <Container fluid  id="footer" style={{backgroundColor:"black"}} className="p-3">
+            <Container fluid  id="footer" style={{backgroundColor:"black",marginTop:"auto"}} className="p-3">
                 <Container className="footer-li pt-3" id="footer">
             <Row >
                 <div className="col-md-2" >

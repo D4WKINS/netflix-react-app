@@ -1,18 +1,25 @@
-import {Container,Navbar,Nav} from 'react-bootstrap'
+import {Container, Navbar, Nav, FormGroup, FormControl, Button} from 'react-bootstrap'
 import {Component} from 'react'
-import Card from './Card'
+import './../App.css'
+import { FaSearch } from 'react-icons/fa'
 
 class NavBar extends Component {
     // state = {
-    //     filteredMovies: []
+    //     searchQuery:""
     //   }
-    //   filterMovies = (query) => {
-    //     const newArray = this.props.data.filter(movie => this.state.query === '' ? true : data.Search.Title.toLowerCase().includes(query.toLowerCase()))
-    //     this.setState({ filteredMovies: newArray})
-    // console.log(filteredMovies)
+
+      handleSearch = (query) =>{
+          if(query.length > 2){
+            this.props.search(query)
+            console.log(query)
+          }else if(query === ""){
+              this.props.search(false)
+          }
+      }
 
     render() { 
         return ( 
+            
             <Navbar style={{backgroundColor:"black"}} className="text-white pb-3"  expand="lg">
             <Container >
                 <Navbar.Brand href="/">
@@ -27,10 +34,14 @@ class NavBar extends Component {
                         <Nav.Link style={{color:"white"}} href="/register">Recently Added</Nav.Link>
                         <Nav.Link style={{color:"white"}} href="/register">My List</Nav.Link>
                     </Nav>
-        
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
-                        <input type="text" className="my-auto" style={{height:"35px"}} placeholder="search" onChange={(e) => this.filterMovies(e.target.value)}/>
+                    <div className="searchBox">
+                        <input className="searchInput"type="text" name="" placeholder="Search" onChange={(e) => this.handleSearch(e.target.value)}/>
+                            <button className="searchButton" href="#">
+                               <FaSearch style={{width:"1em"}}/>
+                            </button>
+                    </div>     
                         <Nav.Link style={{color:"white"}} href="/kids">KIDS</Nav.Link>
                         <Nav.Link style={{color:"white"}} href="/account">
                             <img src="/assets/avatar.png" height="36px" id="avatar" alt="" />
