@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-// import ReactCardCarousel from 'react-card-carousel';
+import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom'
 import {Card} from 'react-bootstrap'
 
 class MovieCard extends Component {
@@ -40,31 +40,34 @@ class MovieCard extends Component {
             }
         }
     }
-    componentDidUpdate =(prevProps)=>{
+    componentDidUpdate =(prevProps,prevState)=>{
         if(this.props.img !== prevProps.img){
+            console.log("Props Change")
+        } else if(this.state.selected !== prevState.selected){
 
         }
     }
     movieSelected = (img, title) =>{
-        console.log(img)
-        console.log(title)
-        this.setState({selected:!this.state.selected})
+       
+        if(this.state.selected === true){
+            this.setState({selected:!this.state.selected})
+        }else if(this.state.selected === false){
+            this.setState({selected:!this.state.selected})
+            console.log(img)
+            console.log(title)
+        }
+          
     }
 
 
   render() {
     return (
+       <Link to="/details">
        <Card style={{ width: '15rem', margin:"0", border:"0"}} style={{border:this.state.selected ? "solid 2px red":"0"}} onClick={()=> this.props.img ? this.movieSelected(this.props.img,this.props.title) : this.movieSelected(this.state.chosenmovie.Poster,this.props.title)}>
             <Card.Img variant="top"  className="img-fluid h-100 shadow "  src={this.props.img? this.props.img : this.state.chosenmovie.Poster}/>
-            {/* <Card.Body>
-                <Card.Title>{this.props.movietitle}</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body> */}
-            </Card>)
+            </Card>
+            </Link>)
+        
   }
 }
 
