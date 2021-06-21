@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom'
+import {BrowserRouter as Router,Switch,Route,Link, Redirect} from 'react-router-dom'
 import './App.css';
 import Home from './Components/Home';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -11,6 +11,7 @@ import MovieDetails from './Components/MovieDetails';
 function App() {
   
   const [query,setQuery] = useState("")
+  // const [selected,setSelected] = useState(false)
 
   const handleSearch = (query) =>{
     console.log(query)
@@ -21,8 +22,11 @@ function App() {
       <div style={{backgroundColor:"black"}}>
 <Router>
       <NavBar search={(query) => handleSearch(query) }/>
-      {query ? <MovieSearchResults searchQuery={query}/>  : <Home/> }
-      <Route exact path="/details" render={(routerProps) => <MovieDetails {...routerProps} />} />
+      <Route path="/" exact component={Home}/>
+      <Route exact path="/results" render={(routerProps) => <MovieSearchResults {...routerProps} searchQuery={query}/>}/>
+      {query ? <Redirect to="/results" /> : <Redirect to="/" /> }
+      <Route exact path="/details" render={(routerProps) => <MovieDetails  {...routerProps} />} />
+    
       <Footer />
       </Router>
       </div>

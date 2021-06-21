@@ -4,10 +4,10 @@ class MovieDetails extends Component {
     // state = {  }
     render() { 
         return (
-            <Container>
+            <Container style={{minHeight:"100vh"}}>
                 <Row>
-                    <Col md={{span:6,offset:6}}>
-                        <h2>Movie Details go here!</h2>
+                    <Col md={{span:6,offset:4}}>
+                        <h2 className="text-light">Movie Details go here!</h2>
                     </Col>
                 </Row>
             </Container>

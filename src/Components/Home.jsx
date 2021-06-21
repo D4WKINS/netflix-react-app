@@ -4,7 +4,6 @@ import { Carousel, Row, Col, Container,Card} from 'react-bootstrap'
 import MovieCard from './MovieCard'
 import Heading from './Heading'
 import './../App.css'
-  // categories: ["Trending Now", "Watch it again", "New Again","Continue Watching"]
 class Home extends Component {
 
   state={
@@ -13,25 +12,8 @@ class Home extends Component {
 
   render() {
     return (
-    //   <ReactCardCarousel >
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       First Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Second Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Third Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Fourth Card
-    //     </div>
-    //     <div style={ MyGallery.CARD_STYLE }>
-    //       Fifth Card
-    //     </div>
-    //   </ReactCardCarousel>
     <>
-<Container >
+<Container>
    <Heading text="Trending Now"/>
     <Carousel className="mb-2" autoplay={ true } autoplay_speed={ 2500 }>
      
@@ -201,22 +183,7 @@ class Home extends Component {
         </Col>
         
         </Row>
-    
       </Carousel.Item>
-   
-      {/* <Carousel.Item>
-      <Row>
-          
-     
-    
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-     
-      </Carousel.Item> */}
-    
-      
     </Carousel>
     </Container>
 </>

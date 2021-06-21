@@ -39,6 +39,8 @@ class MovieSearchResults extends Component {
             console.log("Props change detected")
         }
     }
+    componentWillUnmount=()=>{
+    }
 
 
     render() { 
@@ -50,7 +52,7 @@ class MovieSearchResults extends Component {
             <Heading text={this.state.results && "Movies"}/>
                 {this.state.results? this.state.results.filter(movies => !movies.Poster.includes("N/A") && movies.Type.includes("movie") ).map((movie) =>
                     <Col xs={3} md={3} lg={2} className="d-flex movieCard my-4 justify-content-center">
-                    <MovieCard title={movie.Title} img={movie.Poster}/>
+                    <MovieCard movie={movie}/>
                   </Col>
                 ): console.log(`No sir! not me! - Rick Ross`)}
             </Row>
@@ -58,7 +60,7 @@ class MovieSearchResults extends Component {
             <Heading text={this.state.results && "Series"}/>
                 {this.state.results? this.state.results.filter(movies => !movies.Poster.includes("N/A") && movies.Type.includes("series")).map((movie) =>
                     <Col xs={3} md={3} lg={2} className="d-flex  my-4 justify-content-center">
-                    <MovieCard title={movie.Title} img={movie.Poster}/>
+                    <MovieCard movie={movie}/>
                   </Col>
                 ): console.log(`No sir! not me! - Rick Ross`)}
             </Row>

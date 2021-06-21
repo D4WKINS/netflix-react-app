@@ -1,5 +1,6 @@
 import {Container, Navbar, Nav, FormGroup, FormControl, Button} from 'react-bootstrap'
 import {Component} from 'react'
+import { withRouter, Link} from 'react-router-dom'
 import './../App.css'
 import { FaSearch } from 'react-icons/fa'
 
@@ -19,20 +20,17 @@ class NavBar extends Component {
 
     render() { 
         return ( 
-            
             <Navbar style={{backgroundColor:"black"}} className="text-white pb-3"  expand="lg">
             <Container >
-                <Navbar.Brand href="/">
-                <img src="/assets/netflix_logo.png" id="logo" alt="logo" />
-            </Navbar.Brand>
+                <Link to="/"> <img src="/assets/netflix_logo.png" id="logo" alt="logo" /></Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <Nav.Link style={{color:"white"}} href="/tv-shows">Home</Nav.Link>
-                        <Nav.Link style={{color:"white"}} href="/tv-shows">Tv Shows</Nav.Link>
-                        <Nav.Link style={{color:"white"}} href="/register">Movies</Nav.Link>
-                        <Nav.Link style={{color:"white"}} href="/register">Recently Added</Nav.Link>
-                        <Nav.Link style={{color:"white"}} href="/register">My List</Nav.Link>
+                        <Link className="nav-link" style={{color:"white"}} to="/">Home</Link>
+                        <Link className="nav-link" style={{color:"white"}} to="/">Tv Shows</Link>
+                        <Link className="nav-link" style={{color:"white"}} to="/">Movies</Link>
+                        <Link className="nav-link" style={{color:"white"}} to="/">Recently Added</Link>
+                        <Link className="nav-link" style={{color:"white"}} to="/">My List</Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Nav className="ml-auto">
@@ -42,16 +40,15 @@ class NavBar extends Component {
                                <FaSearch style={{width:"1em"}}/>
                             </button>
                     </div>     
-                        <Nav.Link style={{color:"white"}} href="/kids">KIDS</Nav.Link>
-                        <Nav.Link style={{color:"white"}} href="/account">
+                        <Link className="nav-link" style={{color:"white"}} to="/">KIDS</Link>
+                        <Link style={{color:"white"}} to="/">
                             <img src="/assets/avatar.png" height="36px" id="avatar" alt="" />
-                        </Nav.Link>
+                        </Link>
                     </Nav>
             </Container>
-           
             </Navbar>
         )
     }
 }
  
-export default NavBar ;
+export default withRouter(NavBar) ;
