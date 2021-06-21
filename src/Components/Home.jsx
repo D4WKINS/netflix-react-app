@@ -7,7 +7,8 @@ import './../App.css'
 class Home extends Component {
 
   state={
-    selected:false
+    selected:false,
+    id:""
   }
 
   render() {
@@ -20,11 +21,11 @@ class Home extends Component {
   <Carousel.Item>
   <Row>
     <Col xm={12} md={3} lg={2} className="d-flex justify-content-center">
-      <MovieCard title="the good place"/>
+      <MovieCard  title="the good place" />
     </Col>
 
     <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">
-      <MovieCard title="harry potter"/>
+      <MovieCard  title="harry potter"/>
     </Col>
 
     <Col xm={12} md={3} lg={2} className="d-flex justify-content-center ">

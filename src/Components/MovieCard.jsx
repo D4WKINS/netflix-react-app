@@ -1,5 +1,5 @@
 import React, { Component, } from 'react';
-import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import {Card} from 'react-bootstrap'
 
 class MovieCard extends Component {
@@ -51,12 +51,12 @@ class MovieCard extends Component {
 
   render() {
     return (
-       <Link to={"/details/" + this.props.title} onClick={()=> this.props.movie ? this.movieSelected(this.props.movie) : this.movieSelected(this.state.singleMovie)}>
+       <div onClick={()=> this.props.movie ? this.movieSelected(this.props.movie) : this.movieSelected(this.state.singleMovie)}>
        <Card style={{ width: '15rem', margin:"0", border:"0"}} style={{border:this.state.selected ? "solid 2px red":"0"}} >
             <Card.Img variant="top"  className="img-fluid h-100 shadow "  src={this.props.movie? this.props.movie.Poster : this.state.singleMovie.Poster}/>
             </Card>
-            </Link>)
+            </div>)
   }
 }
 
-export default MovieCard
+export default withRouter(MovieCard)
